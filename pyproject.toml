@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uav-ga-disaster-strategy-engine"
+version = "1.0.0"
+description = "Disaster surveillance UAV strategy planning using a customized genetic algorithm"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24,<3", "matplotlib>=3.7,<4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+uav-ga = "uav_ga.cli:main"
+
+[tool.setuptools]
+packages = ["uav_ga"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
